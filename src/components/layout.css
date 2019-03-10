@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -42,6 +44,7 @@ template {
 a {
   background-color: transparent;
   -webkit-text-decoration-skip: objects;
+  text-decoration: none;
 }
 a:active,
 a:hover {
@@ -619,4 +622,103 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.header__container {
+  display: 'flex';
+}
+
+.drawer__container {
+  min-width: 230px;
+  justify-content: flex-end;
+  
+}
+
+.drawer__header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 7.5px 9px;
+}
+
+@media only screen and (max-width: 600px) {
+  .drawer__header {
+    justify-content: flex-end;
+  }
+}
+
+.app__logo {
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  height: 50px;
+  filter: brightness(40%);
+}
+
+@media only screen and (max-width: 720px) {
+  .app__logo {
+    height: 40px;
+  }
+}
+
+.hero__container {
+  filter: brightness(80%);
+}
+
+.projects__container {
+  background-color: #F1F5F8;
+  padding: 0 2rem 5rem;;
+}
+
+.projects__container--gray {
+  background-color: slategray;
+}
+
+.projects__container--gold {
+  background-color: gold;
+}
+
+.projects__container--dark {
+  background-color: #222;
+}
+
+.projects__container .projects__title {
+  text-align: center;
+  padding: 3rem 0;
+  font-weight: bold;
+  font-size: 2rem;
+  color: #22292F;
+}
+
+.card__media {
+  height: 200px;
+}
+
+.card__media--big {
+  height: 400px;
+}
+
+.card__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.card__container--one-column {
+  grid-template-columns: 1fr;
+}
+
+@media only screen and (max-width: 720px) {
+  .card__container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card__item {
+  width: 100%;
+}
+
+.card__item--big {
+  max-width: unset;
 }
