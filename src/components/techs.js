@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { withStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 
@@ -27,36 +26,16 @@ const tileData = [
   }
 ];
 
-const styles = {
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    backgroundColor: '#22292F',
-    paddingTop: 60
-  },
-  gridList: {
-    width: window.innerWidth < 720 ? 300 : 500,
-    height: 450
-  },
-  image: {
-    width: 150,
-    height: window.innerWidth < 720 ? 150 : 'auto',
-  }
-};
-
 class Techs extends Component {
 
   render() {
-    const { classes } = this.props;
-
+  
     return (
-      <div className={classes.root} id="techs">
-        <GridList cellHeight={180} className={classes.gridList}>
+      <div className="techs__container" id="techs">
+        <GridList cellHeight={180} className="techs__grid-list">
           {tileData.map(tile => (
             <GridListTile key={tile.img}>
-              <img className={classes.image} src={tile.img} alt={tile.title} />
+              <img className="techs__grid-image" src={tile.img} alt={tile.title} />
             </GridListTile>
           ))}
         </GridList>
@@ -65,4 +44,4 @@ class Techs extends Component {
   }
 }
 
-export default withStyles(styles)(Techs);
+export default Techs;

@@ -23,6 +23,7 @@ nav,
 section,
 summary {
   display: block;
+  background: #F1F5F8;
 }
 audio,
 canvas,
@@ -660,25 +661,34 @@ pre tt:after {
   }
 }
 
+.app__title {
+  font-size: 3rem;
+  color: #22292F;
+  font-family: 'Yatra One', sans-serif;
+  letter-spacing: 15px;
+}
+
 .hero__container {
   filter: brightness(80%);
+}
+
+.about__text {
+  color: #DAE1E7;
+  text-align: center;
+  padding: 7% 12%;
+  background: #22292F;
+  font-size: 1rem;
+}
+
+@media only screen and (min-width: 720px) {
+  .about__text {
+    font-size: 1.2rem;
+  }
 }
 
 .projects__container {
   background-color: #F1F5F8;
   padding: 0 2rem 5rem;;
-}
-
-.projects__container--gray {
-  background-color: slategray;
-}
-
-.projects__container--gold {
-  background-color: gold;
-}
-
-.projects__container--dark {
-  background-color: #222;
 }
 
 .projects__container .projects__title {
@@ -687,6 +697,23 @@ pre tt:after {
   font-weight: bold;
   font-size: 2rem;
   color: #22292F;
+}
+
+.projects__card-content {
+  padding: 16px;
+}
+
+.projects__card-actions {
+  margin: 0px 16px 10px;
+}
+
+.projects__card-link {
+  margin-right: 14px;
+  color: #22292F;
+  border: 1px solid #22292F;
+  border-radius: 5px;
+  padding: 2px 14px;
+  font-size: .8rem;
 }
 
 .card__media {
@@ -721,4 +748,45 @@ pre tt:after {
 
 .card__item--big {
   max-width: unset;
+}
+
+.techs__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  overflow: hidden;
+  background: #22292F;
+  padding-top: 50px;
+}
+
+.techs__grid-list {
+  width: 500px;
+  height: 450px;
+}
+
+@media only screen and (max-width: 720px) {
+  .techs__grid-list {
+    width: 300px;  
+  }
+}
+
+.techs__grid-image {
+  padding: 10%;
+}
+
+@media only screen and (max-width: 720px) {
+  .techs__grid-image {
+    padding: 12% 1%;
+  }
+}
+
+.footer__container {
+  text-align: center;
+  padding: 4%;
+  color: #0F2F21;
+  background: #1F9D55;
+}
+
+.footer__designer-text {
+  font-weight: bold;
 }

@@ -1,10 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from "gatsby"
 import Card from '@material-ui/core/Card'
-import CardActions from '@material-ui/core/CardActions'
 import CardContent from '@material-ui/core/CardContent'
 import CardMedia from '@material-ui/core/CardMedia'
-import Button from '@material-ui/core/Button'
 import Typography from '@material-ui/core/Typography'
 import Hops from '../images/hops.jpg'
 import Garden from '../images/garden.jpg'
@@ -14,6 +11,7 @@ import Websites from '../images/websites.jpg'
 class Projects extends Component {
 
   render() {
+    
     return (
       <div id="projects" className="projects__container">
         <Typography variant="headline" component="h1" className="projects__title">
@@ -26,7 +24,7 @@ class Projects extends Component {
               image={Websites}
               title="Websites"
             />
-            <CardContent>
+            <CardContent className="projects__card-content">
               <Typography gutterBottom variant="headline" component="h2">
                 Vue.js Image Viewer
               </Typography>
@@ -34,14 +32,21 @@ class Projects extends Component {
                 Vue.js image widget component with auto play option and music player buttons style.
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small" color="primary" href="https://github.com/zorosantana/images-viewer-vue" target="_blank">
+            <div class="projects__card-actions">
+              <a className="projects__card-link" href="https://github.com/zorosantana/images-viewer-vue" 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 GitHub
-              </Button>
-              <Button size="small" color="primary" href="https://www.npmjs.com/package/images-viewer-vue" target="_blank">
+              </a>
+              <a className="projects__card-link" 
+                href="https://www.npmjs.com/package/images-viewer-vue" 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 NPM
-              </Button>
-            </CardActions>
+              </a>
+            </div>
           </Card>
           <Card className="card__item">
             <CardMedia
@@ -49,7 +54,7 @@ class Projects extends Component {
               image={AppsImg}
               title="React Native Flux Router Expo"
             />
-            <CardContent>
+            <CardContent className="projects__card-content">
               <Typography gutterBottom variant="headline" component="h2">
                 R-N Router Flux Expo
               </Typography>
@@ -57,14 +62,22 @@ class Projects extends Component {
                 React Native router flux with expo support. An alternative way to navigate between mobile screens.
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small" color="primary" href="https://github.com/webstaging/rnrf-expo" target="_blank">
+            <div class="projects__card-actions">
+              <a className="projects__card-link" 
+                href="https://github.com/webstaging/rnrf-expo" 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 GitHub
-              </Button>
-              <Button size="small" color="primary" href="https://www.npmjs.com/package/rnrf-expo" target="_blank">
+              </a>
+              <a className="projects__card-link" 
+                href="https://www.npmjs.com/package/rnrf-expo" 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 NPM
-              </Button>
-            </CardActions>
+              </a>
+            </div>
           </Card>
           <Card className="card__item">
             <CardMedia
@@ -72,7 +85,7 @@ class Projects extends Component {
               image={Garden}
               title="R-N Monthly Budget"
             />
-            <CardContent>
+            <CardContent className="projects__card-content">
               <Typography gutterBottom variant="headline" component="h2">
                 R-N Monthly Budget
               </Typography>
@@ -80,11 +93,15 @@ class Projects extends Component {
                 React Native monthly budget to make general monthly expenses reports based on daily expenses.
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small" color="primary" href="https://github.com/webstaging/monthly-budget" target="_blank">
+            <div class="projects__card-actions">
+              <a className="projects__card-link" 
+                href="https://github.com/webstaging/monthly-budget" 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 GitHub
-              </Button>
-            </CardActions>
+              </a>
+            </div>
           </Card>
           <Card className="card__item">
             <CardMedia
@@ -92,7 +109,7 @@ class Projects extends Component {
               image={Hops}
               title="React SPA Template"
             />
-            <CardContent>
+            <CardContent className="projects__card-content">
               <Typography gutterBottom variant="headline" component="h2">
                 React SPA Template
               </Typography>
@@ -100,11 +117,15 @@ class Projects extends Component {
                 Single page app template system to create modern websites using React.
               </Typography>
             </CardContent>
-            <CardActions>
-              <Button size="small" color="primary" href="https://github.com/webstaging/leaf-theme" target="_blank">
+            <div class="projects__card-actions">
+              <a className="projects__card-link" 
+                href="https://github.com/webstaging/leaf-theme" 
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 GitHub
-              </Button>
-            </CardActions>
+              </a>
+            </div>
           </Card>
         </div>
       </div>
@@ -112,4 +133,4 @@ class Projects extends Component {
   }
 }
 
-export default Projects
+export default Projects;

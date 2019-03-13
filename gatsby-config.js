@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Astrocat`,
     description: `React Material UI Template build with Gatsby`,
-    author: `@zorosantana`
+    author: `@webstaging`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
