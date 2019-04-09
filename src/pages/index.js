@@ -9,7 +9,7 @@ import Techs from "../components/techs"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <About siteTitle="Astrocat" />
+    <About siteTitle="Astrocat.cool" />
     <Projects/>
     <Techs/>
   </Layout>

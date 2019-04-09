@@ -15,7 +15,7 @@ class Projects extends Component {
     return (
       <div id="projects" className="projects__container">
         <Typography variant="headline" component="h1" className="projects__title">
-          Projects
+          Web and Mobile Tools
         </Typography>
         <div className="card__container">
           <Card className="card__item">

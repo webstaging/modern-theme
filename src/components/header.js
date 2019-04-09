@@ -1,27 +1,24 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import { withStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles"
 import React, { Component } from 'react'
-import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
+import CssBaseline from '@material-ui/core/CssBaseline'
+import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 import Drawer from '@material-ui/core/Drawer'
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft'
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import Landscape from '@material-ui/icons/Landscape';
-import Code from '@material-ui/icons/Code';
-import Category from '@material-ui/icons/Category';
+import Typography from '@material-ui/core/Typography'
+import Divider from '@material-ui/core/Divider'
+import List from '@material-ui/core/List'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemText from '@material-ui/core/ListItemText'
+import Landscape from '@material-ui/icons/Landscape'
+import Code from '@material-ui/icons/Code'
+import Category from '@material-ui/icons/Category'
 import logo from '../images/logo-toolbar.png'
-import Leaf from '../images/leaf.jpg'
-import LazyHero from 'react-lazy-hero'
-
 
 const styles = {
   title: {
@@ -29,11 +26,9 @@ const styles = {
     color: 'rgba(0, 0, 0, 0.54)',
     fontWeight: 'bold'
   },
-  toolbar: {
-    background: '#22292F'
-  },
   hamburger: {
-    color: '#1F9D55'
+    color: '#1F9D55',
+    background: '#22292F'
   },
   paper: {
     background: '#22292F'
@@ -41,7 +36,7 @@ const styles = {
   listItem: {
     color: '#1F9D55'
   }
-};
+}
 
 class Header extends Component {
 
@@ -50,40 +45,29 @@ class Header extends Component {
   }
 
   handleDrawerOpen = () => {
-    this.setState({ open: true });
-  };
+    this.setState({ open: true })
+  }
 
   handleDrawerClose = () => {
-    this.setState({ open: false });
-  };
+    this.setState({ open: false })
+  }
 
   render() {
-    const { open } = this.state;
-    const { classes } = this.props;
+    const { open } = this.state
+    const { classes } = this.props
 
     return (
       <div className="header__container">
         <CssBaseline />
         <AppBar position="static">
-          <Toolbar className={classes.toolbar}>
-            <IconButton aria-label="Menu" onClick={this.handleDrawerOpen}>
+          <Toolbar className='header__toolbar'>
+            <IconButton aria-label="Menu" onClick={this.handleDrawerOpen} className='header__menu-container'>
               <MenuIcon className={classes.hamburger} />
             </IconButton>
-            <img src={logo} className="app__logo" alt="logo" />
+            <h1 class='header__title'>Astrocat.cool</h1>
+            <img src={logo} className="app__logo" alt="logo" />    
           </Toolbar>
         </AppBar>
-        <LazyHero imageSrc={Leaf} 
-              isCentered={true}
-              minHeight='500px'
-              opacity={.4}
-              parallaxOffset={100}
-              className="hero__container"
-              color="darkgreen"
-          >
-            <h1 className="app__title">
-              {this.props.siteTitle}
-            </h1>
-        </LazyHero>
         <Drawer 
           classes={{paper: classes.paper}}
           variant="persistent"

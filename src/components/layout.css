@@ -627,6 +627,33 @@ pre tt:after {
 
 .header__container {
   display: 'flex';
+  background: #22292F;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.header__menu-container {
+  background: #22292F;
+  padding: 12px;
+  border: 0;
+  z-index: 1;
+}
+
+.header__toolbar {
+  background: #22292F;
+  width: 100%;
+}
+
+.header__title {
+  position: absolute;
+  margin: 0 auto;
+  right: 0;
+  font-size: 2rem;
+  color: #1f9d55;
+  left: 0;
+  top: 15px;
+  width: 300px;
 }
 
 .drawer__container {
@@ -649,10 +676,10 @@ pre tt:after {
 
 .app__logo {
   position: absolute;
-  top: 8px;
-  right: 20px;
-  height: 50px;
-  filter: brightness(40%);
+  top: 10px;
+  right: 35px;
+  height: 45px;
+  filter: brightness(70%);
 }
 
 @media only screen and (max-width: 720px) {
@@ -673,16 +700,15 @@ pre tt:after {
 }
 
 .about__text {
-  color: #DAE1E7;
   text-align: center;
-  padding: 7% 12%;
-  background: #22292F;
+  padding: 4% 25%;
+  background: #6d6d6d;
   font-size: 1rem;
 }
 
 @media only screen and (min-width: 720px) {
   .about__text {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 }
 
@@ -695,8 +721,9 @@ pre tt:after {
   text-align: center;
   padding: 3rem 0;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.65rem;
   color: #22292F;
+  font-weight: 500;
 }
 
 .projects__card-content {
